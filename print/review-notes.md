@@ -1,8 +1,20 @@
-## Printable PDF Workflow
-- The Pandoc + Eisvogel setup that produces an A4-ready PDF now lives in `print/`.
-- Edit `print/review-notes.md` when you want to tweak the PDF content; it mirrors this README and includes the required YAML metadata.
-- Follow `print/README.md` for installation notes and the exact commands (or run `print/build-pdf.ps1`).
-
+---
+title: "ECE345 Final Review"
+subtitle: "Review Topics & Exam Examples"
+author: "ECE345 Study Group"
+date: "\\today"
+papersize: a4
+fontsize: 11pt
+toc: true
+toc-own-page: true
+lang: en-US
+colorlinks: true
+linkcolor: blue
+header-left: "ECE345 Review"
+header-right: "\\thepage"
+footer-left: "Prepared Notes"
+footer-right: "\\today"
+listings: true
 ---
 
 # Review Topics
@@ -140,26 +152,26 @@
      - Polynomial-time reduction  
      - Equivalence: $x \in L' \Leftrightarrow \alpha(x) \in L$
 
----
+\newpage
 
 # Exam Examples
 
-## 1. Shortest Path (345 Final 2022)
+## Shortest Path (345 Final 2022)
 $m$ roads, $n$ intersections. Roads are either country or main, directed, same length. Find shortest $s \to t$ path that uses only country roads first, then only main roads.
 
-## 2. Amortized Analysis (345 Final 2019)
+## Amortized Analysis (345 Final 2019)
 Binary min-heap with Insert/DeleteMin each $\mathcal{O}(\log n)$.  
 New op: $\text{Delete}(k)$ deletes $k$ smallest elements.  
 Use accounting to show:
 - Insert amortized $\mathcal{O}(\log n)$.
 - Delete$(k)$ amortized $\mathcal{O}(k)$.
 
-## 3. Max Flow Update (345 Final 2019)
+## Max Flow Update (345 Final 2019)
 Given max flow in $G$:
 - Increase capacity of one edge by 1 → update max flow in $\mathcal{O}(V + E)$.
 - Decrease capacity of one edge by 1 → update max flow in $\mathcal{O}(V + E)$.
 
-## 4. Complexity Theory: 4-CNF-NAE-SAT (345 Final 2019)
+## Complexity Theory: 4-CNF-NAE-SAT (345 Final 2019)
 Given 4-CNF formula $\Phi$, NAE means each clause must have ≥1 true and ≥1 false literal.
 
 Tasks:
@@ -170,14 +182,14 @@ Tasks:
   - Transformation  
   - Equivalence proof
 
-## 5. Greedy: Minimizing Art Installations (345 Final 2018)
+## Greedy: Minimizing Art Installations (345 Final 2018)
 Given $b_1 \le \dots \le b_n$, pick $A = \{a_1,\dots,a_m\}$ so each $b_i$ is within 250 of some $a_j$, minimizing $|A|$.
 
 Tasks:
 - Devise greedy algorithm.
 - Prove greedy-choice property.
 
-## 6. Greedy: Maximizing Course Satisfaction (358 Final 2019)
+## Greedy: Maximizing Course Satisfaction (358 Final 2019)
 Given bloatness $b_i$ and flavor $f_i$, maximize:
 
 $$
